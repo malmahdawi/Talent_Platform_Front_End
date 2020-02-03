@@ -3,6 +3,10 @@ import React from 'react'
 
 import Features from './Features'
 import Cards from './Cards'
+
+// nodejs library that concatenates classes
+import classNames from "classnames";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -14,6 +18,7 @@ import Email from "@material-ui/icons/Email";
 import Favorite from "@material-ui/icons/Favorite";
 import Face from "@material-ui/icons/Face";
 // core components
+import Parallax from "components/Parallax/Parallax.js";
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Footer from "components/Footer/Footer.js";
@@ -25,73 +30,70 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 
-import loginPageStyle from "assets/jss/material-kit-pro-react/views/loginPageStyle.js";
+import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle";
 
-import image from "assets/img/bg0.jpg";
+import image from "assets/img/hero.jpg";
 
-const useStyles = makeStyles(loginPageStyle);
-
-
+const useStyles = makeStyles(landingPageStyle);
 
 
-export default function Hero() {
-    React.useEffect(() => {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-      });
-      const classes = useStyles();
-      return(
-        <div>
-        <Header
-          absolute
-          color="transparent"
-          brand="Material Kit PRO React"
-          links={<HeaderLinks dropdownHoverColor="info" />}
-        />
-        <div
-          className={classes.pageHeader}
-          style={{ 
-            backgroundImage: "linear-gradient(-45deg, rgba(217,30,24,9) 0%,rgba(255,102,0,.7) 30%), url(" + image + ")"
-         }}
+
+
+export default function Hero({ ...rest }) {
+  // React.useEffect(() => {
+  //   window.scrollTo(0, 0);
+  //   document.body.scrollTop = 0;
+  // });
+  const classes = useStyles();
+  return (
+    <div>
+      <Header
+        color="transparent"
+        brand="Talents"
+        links={<HeaderLinks dropdownHoverColor="info" />}
+        fixed
+        changeColorOnScroll={{
+          height: 300,
+          color: "info"
+        }}
+        {...rest}
+      />
+      <Parallax
+       image={require("assets/img/hero.jpg")}
+       filter="dark"
+        
         >
-          <div className={classes.container}>
-            <GridContainer>
-              <GridItem xs={12} sm={6} md={6}>
-                <h1 className={classes.title}>Find The Perfect Freelance Services <br></br> For Your Business</h1>
-                <h4>
-                  There{"'"}s no doubt that Tesla is delighted with the
-                  interest, but the data also raises a few questions. How long
-                  will it take for Tesla to fulfill all those extra orders?
-                </h4>
-                <br />
-                <Button
-                  color="danger"
-                  size="lg"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                  target="_blank"
-                  rel=""
-                >
-                  <i className="fas fa-ticket-alt" />
-                  Order Now
-                </Button>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={6} className={classes.mlAuto}>
-                <div className={classes.iframeContainer}>
-                  <iframe
-                    height="250"
-                    src="https://www.youtube.com/embed/IN6QnLpVEPI?ref=creativetim"
-                    frameBorder="0"
-                    allow="encrypted-media"
-                    allowFullScreen=""
-                    title="Tesla"
-                  />
-                </div>
-              </GridItem>
-            </GridContainer>
-          </div>
+        <div className={classes.container}>
+          <GridContainer>
+            <GridItem xs={12} sm={6} md={6}>
+              <h1 className={classes.title}>
+               Find The Perfect Talents
+
+               For Your Event!</h1>
+              <h3>
+              A single place, millions of creative talents
+              </h3>
+              <br />
+              <Button
+                color="danger"
+                size="lg"
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
+                target="_blank"
+              >
+                <i className="fas fa-play" />
+                Watch video
+              </Button>
+            </GridItem>
+          </GridContainer>
         </div>
-        <Features></Features>
-        <Cards></Cards>
+      </Parallax>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classes.container}>
+          <Features></Features>
+          <Cards></Cards>
+        </div>
+      </div>
+        <Footer></Footer>
          </div> 
       )   
 }

@@ -51,9 +51,12 @@ import avatar from "assets/img/faces/avatar.jpg";
 import christian from "assets/img/faces/christian.jpg";
 import marc from "assets/img/faces/marc.jpg";
 import office1 from "assets/img/examples/office1.jpg";
-import color1 from "assets/img/examples/color1.jpg";
-import color2 from "assets/img/examples/color2.jpg";
-import color3 from "assets/img/examples/color3.jpg";
+import DigitalMarkting from "assets/img/DigtalMarkting.jpg";
+import Music from "assets/img/Music.jpg"; 
+import Tech from "assets/img/coding.jpg";
+import Design from "assets/img/Design.jpg";
+import Video from "assets/img/video.jpg";
+import Photo from "assets/img/photo.jpg";
 
 const useStyles = makeStyles(styles);
 
@@ -104,7 +107,7 @@ export default function SectionCards() {
           <GridContainer>
             <GridItem xs={12} sm={7} md={7}>
               <div className={classes.title}>
-                <h2>Dynamic Shadows™</h2>
+                <h2>Categories</h2>
                 <h4>
                   Material Kit PRO is coming with the famous colored shadows.
                   That means each image from the cards is getting an unique
@@ -120,23 +123,23 @@ export default function SectionCards() {
               <Card blog>
                 <CardHeader image>
                   <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <img src={color1} alt="..." />
+                    <img style={{height: '270px'}} src={DigitalMarkting} alt="..." />
                   </a>
                   <div
                     className={classes.coloredShadow}
                     style={{
-                      backgroundImage: `url(${color1})`,
+                      backgroundImage: `url(${DigitalMarkting})`,
                       opacity: "1"
                     }}
                   />
                 </CardHeader>
                 <CardBody>
                   <Warning>
-                    <h6 className={classes.cardCategory}>DYNAMIC SHADOWS</h6>
+                    <h6 className={classes.cardCategory}>Digital Marketing</h6>
                   </Warning>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      The image from this card is getting a yellow shadow
+                    Update and upgrade your business online <br></br>
                     </a>
                   </h4>
                 </CardBody>
@@ -146,23 +149,23 @@ export default function SectionCards() {
               <Card blog>
                 <CardHeader image>
                   <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <img src={color2} alt="..." />
+                    <img style={{height: '270px'}} src={Music} alt="..." />
                   </a>
                   <div
                     className={classes.coloredShadow}
                     style={{
-                      backgroundImage: `url(${color2})`,
+                      backgroundImage: `url(${Music})`,
                       opacity: "1"
                     }}
                   />
                 </CardHeader>
                 <CardBody>
                   <Rose>
-                    <h6 className={classes.cardCategory}>DYNAMIC SHADOWS</h6>
+                    <h6 className={classes.cardCategory}>Music & Audio</h6>
                   </Rose>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      The image from this card is getting a pink shadow
+                    You've got a message. Let the world hear it with music, audio & voice services
                     </a>
                   </h4>
                 </CardBody>
@@ -172,12 +175,90 @@ export default function SectionCards() {
               <Card blog>
                 <CardHeader image>
                   <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <img src={color3} alt="..." />
+                    <img style={{height: '270px'}} src={Tech} alt="..." />
                   </a>
                   <div
                     className={classes.coloredShadow}
                     style={{
-                      backgroundImage: `url(${color3})`,
+                      backgroundImage: `url(${Tech})`,
+                      opacity: "1"
+                    }}
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Info>
+                    <h6 className={classes.cardCategory}>Programming & Tech</h6>
+                  </Info>
+                  <h4 className={classes.cardTitle}>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    Get all the technical bells and whistles without paying for a programming degree
+                    </a>
+                  </h4>
+                </CardBody>
+              </Card>
+            </GridItem>
+            <GridItem xs={12} sm={4} md={4}>
+              <Card blog>
+                <CardHeader image>
+                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <img style={{height: '270px'}} src={Design} alt="..." />
+                  </a>
+                  <div
+                    className={classes.coloredShadow}
+                    style={{
+                      backgroundImage: `url(${Design})`,
+                      opacity: "1"
+                    }}
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Warning>
+                    <h6 className={classes.cardCategory}>Graphics & Design</h6>
+                  </Warning>
+                  <h4 className={classes.cardTitle}>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                        A single place, millions of creative talents
+                    </a>
+                  </h4>
+                </CardBody>
+              </Card>
+            </GridItem>
+            <GridItem xs={12} sm={4} md={4}>
+              <Card blog>
+                <CardHeader image>
+                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <img style={{height: '270px'}} src={Video} alt="..." />
+                  </a>
+                  <div
+                    className={classes.coloredShadow}
+                    style={{
+                      backgroundImage: `url(${Video})`,
+                      opacity: "1"
+                    }}
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Rose>
+                    <h6 className={classes.cardCategory}>Video & Animation</h6>
+                  </Rose>
+                  <h4 className={classes.cardTitle}>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    Your story's unique. Tell it differently with custom video & animation services
+                    </a>
+                  </h4>
+                </CardBody>
+              </Card>
+            </GridItem>
+            <GridItem xs={12} sm={4} md={4}>
+              <Card blog>
+                <CardHeader image>
+                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <img style={{height: '270px'}} src={Photo} alt="..." />
+                  </a>
+                  <div
+                    className={classes.coloredShadow}
+                    style={{
+                      backgroundImage: `url(${Photo})`,
                       opacity: "1"
                     }}
                   />
