@@ -6,10 +6,10 @@ import { Router, Route, Switch } from "react-router";
 
 import "assets/scss/material-kit-pro-react.scss?v=1.8.0";
 
-import Home from "views/HomePage/Home.js";
+import Hero from "views/HomePage/Hero.js";
 import Signup from "views/SignupPage/Signup.js";
 import Signin from "views/SigninPage/Signin.js";
-
+// import Header from './components/Header/Header';
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -17,6 +17,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/signup" component={Signup} />
       <Route path="/signin" component={Signin} />
+      <Route path="/hero" component={Hero} />
       <Route path="/" component={Signin} />
     </Switch>
   </Router>,
