@@ -3,6 +3,8 @@ import React from 'react'
 
 import Features from './Features'
 import Cards from './Cards'
+import Footer from '../Footer/Footer'
+import Clients from './Clients'
 
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -21,7 +23,6 @@ import Face from "@material-ui/icons/Face";
 import Parallax from "components/Parallax/Parallax.js";
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -90,10 +91,14 @@ export default function Hero({ ...rest }) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <Features></Features>
+          <hr></hr>
           <Cards></Cards>
         </div>
       </div>
-        <Footer></Footer>
+      <br></br>
+      <br></br>
+      <Clients></Clients>
+      <Footer></Footer>
          </div> 
       )   
 }

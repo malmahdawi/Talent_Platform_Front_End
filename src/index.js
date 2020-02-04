@@ -9,6 +9,7 @@ import "assets/scss/material-kit-pro-react.scss?v=1.8.0";
 import Hero from "views/HomePage/Hero.js";
 import Signup from "views/SignupPage/Signup.js";
 import Signin from "views/SigninPage/Signin.js";
+import Payment from "./views/Payment/Payment"
 // import Header from './components/Header/Header';
 var hist = createBrowserHistory();
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path="/signup" component={Signup} />
       <Route path="/signin" component={Signin} />
       <Route path="/hero" component={Hero} />
+      <Route path="/payment" component={Payment} />
       <Route path="/" component={Signin} />
     </Switch>
   </Router>,

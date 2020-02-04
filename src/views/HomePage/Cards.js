@@ -20,6 +20,7 @@ import Bookmark from "@material-ui/icons/Bookmark";
 import Refresh from "@material-ui/icons/Refresh";
 import Receipt from "@material-ui/icons/Receipt";
 // core components
+import classNames from "classnames";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
@@ -120,26 +121,27 @@ export default function SectionCards() {
           </GridContainer>
           <GridContainer>
             <GridItem xs={12} sm={4} md={4}>
-              <Card blog>
+
+            <Card blog>
                 <CardHeader image>
                   <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <img style={{height: '270px'}} src={DigitalMarkting} alt="..." />
+                    <img style={{height: '270px'}} src={Video} alt="..." />
                   </a>
                   <div
                     className={classes.coloredShadow}
                     style={{
-                      backgroundImage: `url(${DigitalMarkting})`,
+                      backgroundImage: `url(${Video})`,
                       opacity: "1"
                     }}
                   />
                 </CardHeader>
                 <CardBody>
-                  <Warning>
-                    <h6 className={classes.cardCategory}>Digital Marketing</h6>
-                  </Warning>
+                  <Rose>
+                    <h6 className={classes.cardCategory}>Video & Animation</h6>
+                  </Rose>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                    Update and upgrade your business online <br></br>
+                    Your story's unique. Tell it differently with custom video & animation services
                     </a>
                   </h4>
                 </CardBody>
@@ -224,26 +226,26 @@ export default function SectionCards() {
               </Card>
             </GridItem>
             <GridItem xs={12} sm={4} md={4}>
-              <Card blog>
+            <Card blog>
                 <CardHeader image>
                   <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <img style={{height: '270px'}} src={Video} alt="..." />
+                    <img style={{height: '270px'}} src={DigitalMarkting} alt="..." />
                   </a>
                   <div
                     className={classes.coloredShadow}
                     style={{
-                      backgroundImage: `url(${Video})`,
+                      backgroundImage: `url(${DigitalMarkting})`,
                       opacity: "1"
                     }}
                   />
                 </CardHeader>
                 <CardBody>
-                  <Rose>
-                    <h6 className={classes.cardCategory}>Video & Animation</h6>
-                  </Rose>
+                  <Warning>
+                    <h6 className={classes.cardCategory}>Digital Marketing</h6>
+                  </Warning>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                    Your story's unique. Tell it differently with custom video & animation services
+                    Update and upgrade your business online <br></br>
                     </a>
                   </h4>
                 </CardBody>
@@ -276,6 +278,21 @@ export default function SectionCards() {
               </Card>
             </GridItem>
           </GridContainer>
+          <GridContainer justify="center">
+              <GridItem
+                md={12}
+                sm={12}
+                className={classNames(
+                  classes.mrAuto,
+                  classes.mlAuto,
+                  classes.textCenter
+                )}
+              >
+                <Button style={{background: "orange"}} round>
+                  MORE
+                </Button>
+              </GridItem>
+            </GridContainer>
         </div>
       </div>
   );
