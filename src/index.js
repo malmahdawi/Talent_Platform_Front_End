@@ -11,6 +11,8 @@ import Signup from "views/SignupPage/Signup.js";
 import Signin from "views/SigninPage/Signin.js";
 import Service from "views/ServicePage/Sictions/Service.js";
 import ServicePage from "views/ServicePage/ServicePage"
+import ServiceItemParent from "views/ServicePage/Sictions/ServiceItemParent"
+import CategoriesPage from "views/Categories/CategoriesPage.js"
 
 var hist = createBrowserHistory();
 
@@ -21,6 +23,8 @@ ReactDOM.render(
       <Route path="/signin" component={Signin} />
       <Route path="/service" component={Service} />
       <Route path="/servicePage" component={ServicePage}/>
+      <Route path ='/serviceItemParent' component ={ServiceItemParent}/>
+      <Route path='/categoriesPage' component={CategoriesPage}/>
       <Route path="/" component={Signin} />
     </Switch>
   </Router>,
