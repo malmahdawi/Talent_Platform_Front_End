@@ -9,6 +9,8 @@ import "assets/scss/material-kit-pro-react.scss?v=1.8.0";
 import Home from "views/HomePage/Home.js";
 import Signup from "views/SignupPage/Signup.js";
 import Signin from "views/SigninPage/Signin.js";
+import Service from "views/ServicePage/Sictions/Service.js";
+import ServicePage from "views/ServicePage/ServicePage"
 
 var hist = createBrowserHistory();
 
@@ -17,6 +19,8 @@ ReactDOM.render(
     <Switch>
       <Route path="/signup" component={Signup} />
       <Route path="/signin" component={Signin} />
+      <Route path="/service" component={Service} />
+      <Route path="/servicePage" component={ServicePage}/>
       <Route path="/" component={Signin} />
     </Switch>
   </Router>,
