@@ -80,13 +80,19 @@ export default function ServiceItems(props) {
                           <p className={classes.cardDescriptionWhite}>
                             ${s.service.price_range}
                           </p>
-                          <Link>
+                          <Link to={{
+                                    pathname:"/make-payment",
+                                    state: {service_id: s.service.id}
+                            }}>
                             <Button simple color="white">
                               <Subject /> Details
                             </Button>
                           </Link>
                               {(localStorage.user_type === "buyer")? 
-                                (<Link >
+                                (<Link to={{
+                                  pathname:"/make-offer",
+                                  state: {service_id: s.service.id}
+                                }}>
                                 <Button simple color="white">
                                   <Subject /> Make An Offer
                                 </Button>
