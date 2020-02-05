@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router";
 
-
+import Home from "views/HomePage/Hero.js";
 import Signup from "views/SignupPage/SignupParent.js";
 import Signin from "views/SigninPage/SigninParent.js";
 import Offer from "views/OfferPage/OfferParent.js"
@@ -11,7 +11,7 @@ import CheckOffersParent from 'views/CheckOffersPage/CheckOffersParent';
 // import CheckOffersContainer from 'views/CheckOffersPage/Senctions/CheckOffersContainer'
 import AddNewServiceParent from './views/ManageServicePage/Sections/AddNewServiceParent.js'
 import EditServiceParent from './views/ManageServicePage/Sections/EditServiceParent.js'
-import Hero from './views/HomePage/Hero'
+import PaymentParent from "./views/Payment/PaymentParent.js"
 
 var hist = createBrowserHistory();
 
@@ -30,7 +30,8 @@ export default class App extends Component {
                 <Route path="/check-offers" component={CheckOffersParent} /> 
                 <Route path="/add-new-service" component={AddNewServiceParent} />
                 <Route path="/edit-service" component={EditServiceParent} />
-                <Route path="/" component={Signin} />
+                <Route path="/make-payment" component={PaymentParent} />
+                <Route path="/" component={Home} />
             </Switch>
         </Router>
       </div>

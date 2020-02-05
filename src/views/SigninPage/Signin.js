@@ -61,7 +61,7 @@ export default function Signin(props,{...rest}) {
         >
           <div style={{opacity: '0.7'}} className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={12} sm={12} md={5}>
                 <Card>
                   <form className={classes.form}>
                     <CardHeader
@@ -109,8 +109,13 @@ export default function Signin(props,{...rest}) {
                       />
                     </CardBody>
                     <div className={classes.textCenter}>
+<<<<<<< HEAD
                       <Button simple color="primary" size="lg" onClick={props.handleSubmit}>
                         Submit
+=======
+                      <Button  simple color="primary" size="lg" onClick={props.handleSubmit}>
+                        Login
+>>>>>>> 5bbba0380230875867f0791ef4c5b7c5bb60bb8d
                       </Button>
                     </div>
                   </form>

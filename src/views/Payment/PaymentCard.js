@@ -5,11 +5,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import InputAdornment from "@material-ui/core/InputAdornment";
 
 import Datetime from "react-datetime";
-
-import ImageUpload from '../ImageUploadTool/ImageUpload'
-
+// @material-ui/icons
+import Email from "@material-ui/icons/Email";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -29,10 +29,9 @@ import Axios from "axios";
 const useStyles = makeStyles(contactsStyle);
 
 
-export default function PaymentCard({ ...rest }) {
-  React.useEffect(() => {
-    Axios.post()
-  });
+export default function PaymentCard(props,{ ...rest }) {
+  // console.log(props);
+  
   const classes = useStyles();
   return (
     <div className="cd-section" {...rest}>
@@ -55,28 +54,54 @@ export default function PaymentCard({ ...rest }) {
                       <GridItem xs={12} sm={6} md={6}>
                         <CustomInput
                           labelText="Price"
-                          id="first"
+                          id="price"
                           formControlProps={{
                             fullWidth: true
+                          }}
+                          inputProps={{
+                            onChange: e=>props.handleChange(e),
+                            type: "price",
                           }}
                         />
                       </GridItem>
                       <GridItem xs={12} sm={6} md={6}>
                           <br></br>
                       <Datetime
-                      inputProps={{ placeholder: "Datetime Picker Here" }}
+                        dateFormat="MMMM DD, YYYY hh:mm"
+                        timeFormat={false}
+                        value={props.time}
+                        onChange={ (e) => props.handleChangeDate(e)}
+                        inputProps={{ 
+                          placeholder: "Datetime Picker Here" ,
+                          
+                        }}
                         />
                       </GridItem>
                     </GridContainer>
                     
                     <GridContainer>
                       <GridItem style={{textAlign: 'center'}} xs={12} sm={12} md={12}>
-                        <ImageUpload></ImageUpload>
+                      <CustomInput
+                        id="url"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                            onChange: e=>props.handleChange(e),
+                            placeholder: "Insert Photo Url...",
+                            type: "reciept_url",
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                <Email className={classes.inputIconsColor} />
+                                </InputAdornment>
+                            )
+                        }}
+                        />
                       </GridItem>
                     </GridContainer>
                     <GridContainer>
                       <GridItem style={{textAlign: 'center'}} xs={12} sm={12} md={12}>
-                      <Button  color="primary" style={{textAlign: 'center'}}>
+                      <Button  color="primary" style={{textAlign: 'center'}} simple onClick={props.handleSubmit}>
                       SUBMIT
                     </Button>
                       </GridItem>
