@@ -54,7 +54,7 @@ export default function Signin(props,{...rest}) {
         <div
           className={classes.pageHeader}
           style={{
-            backgroundImage: "url(" + image + ")",
+            backgroundImage: "linear-gradient(-45deg, rgba(217,30,24,9) 0%,rgba(255,102,0,.7) 30%), url(" + image + ")",
             backgroundSize: "cover",
             backgroundPosition: "top center"
           }}
