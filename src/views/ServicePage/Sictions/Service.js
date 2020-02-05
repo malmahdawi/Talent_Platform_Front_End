@@ -46,12 +46,12 @@ export default function Service() {
 
     <div>
       <GridContainer>
-        {data.map(item => (
-          <GridItem md={4} sm={4}>
+        {data.map((item , k) => (
+          <GridItem key = {k} md={4} sm={4}>
             <Card product plain>
               <CardHeader image plain>
                 <a href="#pablo">
-                  <img src={item.galleries[0].url} alt="mohammed" />
+                  <img  src={item.galleries[0].url} alt="mohammed" />
                 </a>
                 <div
                   className={classes.coloredShadow}
