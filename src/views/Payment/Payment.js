@@ -21,7 +21,7 @@ import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.j
 
 const useStyles = makeStyles(aboutUsStyle);
 
-export default function Payment() {
+export default function Payment(props) {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -58,7 +58,7 @@ export default function Payment() {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <PaymentCard></PaymentCard>
+          <PaymentCard handleChange={props.handleChange} handleChangeDate={props.handleChangeDate} handleSubmit={props.handleSubmit} time={props.time}></PaymentCard>
         </div>
       </div>
     </div>

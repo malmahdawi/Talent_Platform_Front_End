@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Icon from "@material-ui/core/Icon";
@@ -144,15 +144,25 @@ export default function OfferCard(props) {
                         <div className={classes.textCenter}>
                         {
                             props.offer.offer.status == "accepted"?   
-                            (  <Button round  color="warning">
-                                    <Payment/> Payment
-                                </Button>):null
+                            (  
+                                <Link to={{
+                                    pathname:"/make-payment",
+                                    state: {service_id: props.offer.service.id, offer_id: props.offer.offer.id}
+                                    }}>
+                                    <Button round  color="warning">
+                                        <Payment/> Payment
+                                    </Button>
+                                </Link>
+                                ):null
                         }
                         {
                             props.offer.offer.status == "pending"?   
-                            (  <Button round justIcon color="danger" onClick={()=>props.handleAction(props.offer.offer.service_id, props.offer.offer.id)}>
-                                    <Delete />
-                                </Button>):null
+                            (                    
+                                
+                                    <Button round justIcon color="danger" onClick={()=>props.handleAction(props.offer.offer.service_id, props.offer.offer.id)}>
+                                        <Delete />
+                                    </Button>
+                                ):null
                         }
                         
                         
