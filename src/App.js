@@ -11,6 +11,7 @@ import CheckOffersParent from 'views/CheckOffersPage/CheckOffersParent';
 import AddNewServiceParent from './views/ManageServicePage/Sections/AddNewServiceParent.js'
 import EditServiceParent from './views/ManageServicePage/Sections/EditServiceParent.js'
 import PaymentParent from "./views/Payment/PaymentParent.js"
+import ServiceParent from "./views/ServicePage/ServiceParent.js"
 
 var hist = createBrowserHistory();
 
@@ -28,6 +29,7 @@ export default class App extends Component {
                 <Route path="/add-new-service" component={AddNewServiceParent} />
                 <Route path="/edit-service" component={EditServiceParent} />
                 <Route path="/make-payment" component={PaymentParent} />
+                <Route path="/services" component={ServiceParent} />
                 <Route path="/" component={Home} />
             </Switch>
         </Router>
