@@ -1,1 +1,1 @@
-module.exports = {url:"https://morning-brook-81343.herokuapp.com/api/v1"}
+module.exports = {url:"https://morning-brook-81343.herokuapp.com"}

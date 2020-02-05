@@ -36,10 +36,10 @@ export default function Footer(props) {
         {children !== undefined ? (
           <div>
             <div className={classes.content}>{children}</div>
-            <hr />
+            <hr/>
           </div>
         ) : (
-          " "
+          " "      
         )}
         {content}
         <div className={classes.clearFix} />

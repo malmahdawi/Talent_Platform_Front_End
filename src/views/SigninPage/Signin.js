@@ -28,8 +28,11 @@ import image from "assets/img/bg7.jpg";
 
 const useStyles = makeStyles(loginPageStyle);
 
-export default function Signin() {
+
+
+export default function Signin(props,{...rest}) {
     // const [user, setUser] = React.useState({email:"", password:""})
+
     React.useEffect(() => {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
@@ -37,16 +40,21 @@ export default function Signin() {
       const classes = useStyles();
     return (
         <div>
-        <Header
-          absolute
-          color="transparent"
-          brand="Material Kit PRO React"
-          links={<HeaderLinks dropdownHoverColor="info" />}
-        />
+      <Header
+        color="transparent"
+        brand="Material Kit PRO React"
+        links={<HeaderLinks dropdownHoverColor="info" />}
+        fixed
+        changeColorOnScroll={{
+          height: 300,
+          color: "info"
+        }}
+        {...rest}
+      />
         <div
           className={classes.pageHeader}
           style={{
-            backgroundImage: "url(" + image + ")",
+            backgroundImage: "linear-gradient(-45deg, rgba(217,30,24,9) 0%,rgba(255,102,0,.7) 30%), url(" + image + ")",
             backgroundSize: "cover",
             backgroundPosition: "top center"
           }}
@@ -58,69 +66,26 @@ export default function Signin() {
                   <form className={classes.form}>
                     <CardHeader
                       color="primary"
-                      login
                       className={classes.cardHeader}
                     >
                       <h4 className={classes.cardTitle}>Login</h4>
-                      {/* <div className={classes.socialLine}>
-                        <Button
-                          justIcon
-                          color="transparent"
-                          className={classes.iconButtons}
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fab fa-twitter" />
-                        </Button>
-                        <Button
-                          justIcon
-                          color="transparent"
-                          className={classes.iconButtons}
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fab fa-facebook" />
-                        </Button>
-                        <Button
-                          justIcon
-                          color="transparent"
-                          className={classes.iconButtons}
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className="fab fa-google-plus-g" />
-                        </Button>
-                      </div> */}
                     </CardHeader>
-                    <p className={classes.description + " " + classes.textCenter}>
-                      Or Be Classical
-                    </p>
-                    <CardBody signup>
-                      <CustomInput
-                        id="first"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          placeholder: "First Name...",
-                          type: "text",
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <Face className={classes.inputIconsColor} />
-                            </InputAdornment>
-                          )
-                        }}
-                      />
+
+                    <CardBody signin>
                       <CustomInput
                         id="email"
                         formControlProps={{
                           fullWidth: true
                         }}
                         inputProps={{
-                          placeholder: "Email...",
-                          type: "email",
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <Email className={classes.inputIconsColor} />
-                            </InputAdornment>
-                          )
+                            onChange: e=>props.handleChange(e),
+                            placeholder: "Email...",
+                            type: "email",
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                <Email className={classes.inputIconsColor} />
+                                </InputAdornment>
+                            )
                         }}
                       />
                       <CustomInput
@@ -129,22 +94,23 @@ export default function Signin() {
                           fullWidth: true
                         }}
                         inputProps={{
-                          placeholder: "Password",
-                          type: "password",
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <Icon className={classes.inputIconsColor}>
-                                lock_utline
-                              </Icon>
-                            </InputAdornment>
-                          ),
-                          autoComplete: "off"
+                            onChange: e=>props.handleChange(e),
+                            placeholder: "Password",
+                            type: "password",
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                <Icon className={classes.inputIconsColor}>
+                                    lock_utline
+                                </Icon>
+                                </InputAdornment>
+                            ),
+                            autoComplete: "off"
                         }}
                       />
                     </CardBody>
                     <div className={classes.textCenter}>
-                      <Button simple color="primary" size="lg">
-                        Get started
+                      <Button simple color="primary" size="lg" onClick={props.handleSubmit}>
+                        Login
                       </Button>
                     </div>
                   </form>

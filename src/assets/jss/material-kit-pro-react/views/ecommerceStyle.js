@@ -26,7 +26,9 @@ const styles = {
   },
   container: {
     ...container,
-    zIndex: "2"
+    zIndex: "2",
+    marginBottom: "100px",
+    paddingBottom: "40px"
   },
   brand: {
     "& h1, & h4": {
