@@ -11,11 +11,9 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-import Button from "components/CustomButtons/Button.js";
 import gucci from "assets/img/examples/gucci.jpg";
 import classNames from "classnames";
-import Tooltip from "@material-ui/core/Tooltip";
-import Favorite from "@material-ui/icons/Favorite";
+
 
 // core components
 import styles from "assets/jss/material-kit-pro-react/views/ecommerceStyle.js";
@@ -51,7 +49,7 @@ export default function Service() {
             <Card product plain>
               <CardHeader image plain>
                 <a href="#pablo">
-                  <img  src={item.galleries[0].url} alt="mohammed" />
+                  <img style={{height: '270px'}} src={item.galleries[0]? item.galleries[0].url:""} alt="mohammed" />
                 </a>
                 <div
                   className={classes.coloredShadow}
@@ -72,18 +70,6 @@ export default function Service() {
                     price range : {item.service.price_range} per Hour
                   </span>
 
-                </div>
-                <div className={classNames(classes.stats, classes.mlAuto)}>
-                  <Tooltip
-                    id="tooltip-top"
-                    title="Saved to Wishlist"
-                    placement="top"
-                    classes={{ tooltip: classes.tooltip }}
-                  >
-                    <Button justIcon simple color="rose">
-                      <Favorite />
-                    </Button>
-                  </Tooltip>
                 </div>
               </CardFooter>
             </Card>
