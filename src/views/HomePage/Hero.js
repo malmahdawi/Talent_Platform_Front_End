@@ -55,7 +55,7 @@ export default function Hero({ ...rest }) {
         fixed
         changeColorOnScroll={{
           height: 300,
-          color: "info"
+          color: "info" 
         }}
         {...rest}
       />
