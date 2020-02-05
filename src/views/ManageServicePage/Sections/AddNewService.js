@@ -5,12 +5,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Icon from "@material-ui/core/Icon";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
 // @material-ui/icons
-import Face from "@material-ui/icons/Face";
 import Email from "@material-ui/icons/Email";
 import Favorite from "@material-ui/icons/Favorite";
 // core components
@@ -24,6 +19,10 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 import loginPageStyle from "assets/jss/material-kit-pro-react/views/loginPageStyle.js";
 
@@ -33,13 +32,26 @@ const useStyles = makeStyles(loginPageStyle);
 
 
 
-export default function Signup(props,{...rest}) {
-  const [simpleSelect, setSimpleSelect] = React.useState("");
-  const handleSimple = event => {
-    setSimpleSelect(event.target.value);
-    props.handleRole(event);
+export default function AddNewService(props,{...rest}) {
+  const [multipleSelect, setMultipleSelect] = React.useState([]);
+  const handleMultiple = event => {
+    setMultipleSelect(event.target.value);
+    props.handleCategories(event.target.value);
   };
-  
+  const menues = props.categories.map((e,i)=>{
+    return(
+              <MenuItem key={i}
+                classes={{
+                  // root: classes.selectMenuItem,
+                  // selected: classes.selectMenuItemSelectedMultiple
+                }}
+                value={e[0]}
+              >
+                {e[1]}
+              </MenuItem>
+    )
+  })
+
     React.useEffect(() => {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
@@ -68,58 +80,42 @@ export default function Signup(props,{...rest}) {
         >
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={12} sm={12} md={8}>
                 <Card>
                   <form className={classes.form}>
                     <CardHeader
                       color="primary"
                       className={classes.cardHeader}
                     >
-                      <h4 className={classes.cardTitle}>Sign Up</h4>
+                      <h4 className={classes.cardTitle}>Login</h4>
                     </CardHeader>
 
-                    <CardBody signin>
-                        <CustomInput
-                        id="username"
-                        formControlProps={{
-                            fullWidth: true
-                        }}
-                        inputProps={{
-                            onChange: e=>props.handleChange(e),
-                            placeholder: "Username...",
-                            type: "text",
-                            startAdornment: (
-                            <InputAdornment position="start">
-                                <Face className={classes.inputIconsColor} />
-                            </InputAdornment>
-                            )
-                        }}
-                        />
+                    <CardBody >
                       <CustomInput
-                        id="email"
+                        id="name"
                         formControlProps={{
                           fullWidth: true
                         }}
                         inputProps={{
                             onChange: e=>props.handleChange(e),
-                            placeholder: "Email...",
-                            type: "email",
+                            placeholder: "Name...",
+                            type: "name",
                             startAdornment: (
                                 <InputAdornment position="start">
-                                    <Email className={classes.inputIconsColor} />
+                                <Email className={classes.inputIconsColor} />
                                 </InputAdornment>
                             )
                         }}
                       />
                       <CustomInput
-                        id="password"
+                        id="price_range"
                         formControlProps={{
                           fullWidth: true
                         }}
                         inputProps={{
                             onChange: e=>props.handleChange(e),
-                            placeholder: "Password",
-                            type: "password",
+                            placeholder: "Price Range...",
+                            type: "price_range",
                             startAdornment: (
                                 <InputAdornment position="start">
                                 <Icon className={classes.inputIconsColor}>
@@ -127,64 +123,92 @@ export default function Signup(props,{...rest}) {
                                 </Icon>
                                 </InputAdornment>
                             ),
-                            autoComplete: "off"
                         }}
                       />
-                      <br/>
-                      <FormControl fullWidth className={classes.selectFormControl}>
-                        <InputLabel
-                          htmlFor="simple-select"
-                          className={classes.selectLabel}
-                        >
-                          Select User Type
+                        <CustomInput
+                        id="location"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                            onChange: e=>props.handleChange(e),
+                            placeholder: "Location...",
+                            type: "location",
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                <Email className={classes.inputIconsColor} />
+                                </InputAdornment>
+                            )
+                        }}
+                        />
+                        <CustomInput
+                        id="description"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                            onChange: e=>props.handleChange(e),
+                            placeholder: "Description...",
+                            type: "description",
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                <Email className={classes.inputIconsColor} />
+                                </InputAdornment>
+                            )
+                        }}
+                        />
+                        <CustomInput
+                        id="url"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                            onChange: e=>props.handleUrl(e),
+                            placeholder: "Insert Photo Url...",
+                            type: "url",
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                <Email className={classes.inputIconsColor} />
+                                </InputAdornment>
+                            )
+                        }}
+                        />
+                        <FormControl fullWidth className={classes.selectFormControl}>
+                          <InputLabel
+                            htmlFor="multiple-select"
+                            className={classes.selectLabel}
+                          >
+                            Multiple Select
                         </InputLabel>
-                        <Select
-                          MenuProps={{
-                            className: classes.selectMenu
-                          }}
-                          classes={{
-                            select: classes.select
-                          }}
-                          value={simpleSelect}
-                          onChange={handleSimple}
-                          inputProps={{
-                            name: "simpleSelect",
-                            id: "simple-select"
-                          }}
-                        >
-                          <MenuItem
-                            disabled
-                            classes={{
-                              root: classes.selectMenuItem
+                          <Select
+                            multiple
+                            value={multipleSelect}
+                            onChange={handleMultiple}
+                            MenuProps={{
+                              className: classes.selectMenu,
+                              classes: { paper: classes.selectPaper }
+                            }}
+                            classes={{ select: classes.select }}
+                            inputProps={{
+                              name: "multipleSelect",
+                              id: "multiple-select"
                             }}
                           >
-                            User Type
-                          </MenuItem>
-                          <MenuItem
-                            classes={{
-                              root: classes.selectMenuItem,
-                              selected: classes.selectMenuItemSelected
-                            }}
-                            value="1"
-                          >
-                            Seller
-                          </MenuItem>
-                          <MenuItem
-                            classes={{
-                              root: classes.selectMenuItem,
-                              selected: classes.selectMenuItemSelected
-                            }}
-                            value="2"
-                          >
-                            Buyer
-                          </MenuItem>
-                        </Select>
-                      </FormControl>
+                            <MenuItem
+                              disabled
+                              classes={{
+                                root: classes.selectMenuItem
+                              }}
+                            >
+                              Multiple Select
+                            </MenuItem>
+                              {menues}
+                          </Select>
+                        </FormControl>
                     </CardBody>
-                    
                     <div className={classes.textCenter}>
                       <Button simple color="primary" size="lg" onClick={props.handleSubmit}>
-                        Get Started
+                        Add Service
                       </Button>
                     </div>
                   </form>

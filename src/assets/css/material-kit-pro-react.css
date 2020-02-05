@@ -661,10 +661,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border: 1px solid #333; }
 
 .noUi-target.slider-primary .noUi-connect, .noUi-target.slider-primary.noUi-connect {
-  background-color: #9c27b0; }
+  background-color: #ff4f00; }
 
 .noUi-target.slider-primary .noUi-handle {
-  border-color: #9c27b0; }
+  border-color: #ff4f00; }
 
 .noUi-target.slider-info .noUi-connect, .noUi-target.slider-info.noUi-connect {
   background-color: #00bcd4; }

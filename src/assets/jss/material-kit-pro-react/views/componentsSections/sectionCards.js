@@ -17,7 +17,11 @@ import imageStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 import rotatingCards from "assets/jss/material-kit-pro-react/rotatingCards.js";
 
 const styles = {
-  container,
+  container: {
+    ...container,
+    // zIndex: "2"s
+    marginBottom: "30px"
+  },
   coloredShadow,
   title,
   mlAuto,
