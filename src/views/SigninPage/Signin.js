@@ -24,7 +24,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import loginPageStyle from "assets/jss/material-kit-pro-react/views/loginPageStyle.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/Clown.jpg";
 
 const useStyles = makeStyles(loginPageStyle);
 
@@ -47,7 +47,7 @@ export default function Signin(props,{...rest}) {
         fixed
         changeColorOnScroll={{
           height: 300,
-          color: "info"
+          color: "primary"
         }}
         {...rest}
       />
@@ -59,7 +59,7 @@ export default function Signin(props,{...rest}) {
             backgroundPosition: "top center"
           }}
         >
-          <div className={classes.container}>
+          <div style={{opacity: '0.7'}} className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={4}>
                 <Card>
@@ -110,7 +110,7 @@ export default function Signin(props,{...rest}) {
                     </CardBody>
                     <div className={classes.textCenter}>
                       <Button simple color="primary" size="lg" onClick={props.handleSubmit}>
-                        Login
+                        Submit
                       </Button>
                     </div>
                   </form>

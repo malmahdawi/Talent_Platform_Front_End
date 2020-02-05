@@ -54,9 +54,11 @@ const styles = {
   },
   cardCategory: {
     marginTop: "10px",
+    textAlign: 'center',
     "& svg": {
       position: "relative",
-      top: "8px"
+      top: "8px",
+      textAlign: 'center'
     }
   },
   cardCategorySocial: {

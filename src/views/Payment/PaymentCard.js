@@ -44,7 +44,7 @@ export default function PaymentCard({ ...rest }) {
               <Card className={classes.card1}>
                 <form>
                   <CardHeader
-                    style={{backgroundColor: '#ff4f00'}}
+                    style={{backgroundColor: '#f44336'}}
                     contact
                     className={classes.textCenter}
                   >

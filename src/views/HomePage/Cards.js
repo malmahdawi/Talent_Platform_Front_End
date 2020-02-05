@@ -4,21 +4,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import Share from "@material-ui/icons/Share";
-import ChatBubble from "@material-ui/icons/ChatBubble";
-import Schedule from "@material-ui/icons/Schedule";
-import TrendingUp from "@material-ui/icons/TrendingUp";
-import Subject from "@material-ui/icons/Subject";
-import WatchLater from "@material-ui/icons/WatchLater";
-import People from "@material-ui/icons/People";
-import Business from "@material-ui/icons/Business";
-import Check from "@material-ui/icons/Check";
-import Close from "@material-ui/icons/Close";
-import Delete from "@material-ui/icons/Delete";
-import Bookmark from "@material-ui/icons/Bookmark";
-import Refresh from "@material-ui/icons/Refresh";
-import Receipt from "@material-ui/icons/Receipt";
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 // core components
 import classNames from "classnames";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -106,15 +92,9 @@ export default function SectionCards() {
       <div>
           <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={7} md={7}>
-              <div className={classes.title}>
+            <GridItem style={{textAlign: 'center'}} xs={12} sm={12} md={12}>
+              <div  className={classes.title}>
                 <h2>Categories</h2>
-                <h4>
-                  Material Kit PRO is coming with the famous colored shadows.
-                  That means each image from the cards is getting an unique
-                  color shadow. You don{"'"}t have to do anything to activate
-                  them, just enjoy the new look of your website.
-                </h4>
                 <br />
               </div>
             </GridItem>
@@ -137,7 +117,7 @@ export default function SectionCards() {
                 </CardHeader>
                 <CardBody>
                   <Rose>
-                    <h6 className={classes.cardCategory}>Video & Animation</h6>
+                    <h6>Video & Animation</h6>
                   </Rose>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -188,9 +168,9 @@ export default function SectionCards() {
                   />
                 </CardHeader>
                 <CardBody>
-                  <Info>
+                  <Rose>
                     <h6 className={classes.cardCategory}>Programming & Tech</h6>
-                  </Info>
+                  </Rose>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                     Get all the technical bells and whistles without paying for a programming degree
@@ -214,9 +194,9 @@ export default function SectionCards() {
                   />
                 </CardHeader>
                 <CardBody>
-                  <Warning>
+                  <Rose>
                     <h6 className={classes.cardCategory}>Graphics & Design</h6>
-                  </Warning>
+                  </Rose>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                         A single place, millions of creative talents
@@ -240,9 +220,9 @@ export default function SectionCards() {
                   />
                 </CardHeader>
                 <CardBody>
-                  <Warning>
+                  <Rose>
                     <h6 className={classes.cardCategory}>Digital Marketing</h6>
-                  </Warning>
+                  </Rose>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                     Update and upgrade your business online <br></br>
@@ -266,12 +246,12 @@ export default function SectionCards() {
                   />
                 </CardHeader>
                 <CardBody>
-                  <Info>
-                    <h6 className={classes.cardCategory}>DYNAMIC SHADOWS</h6>
-                  </Info>
+                  <Rose>
+                    <h6 className={classes.cardCategory}>Photography</h6>
+                  </Rose>
                   <h4 className={classes.cardTitle}>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      The image from this card is getting a blue shadow
+                    Hire the best freelance Photographers
                     </a>
                   </h4>
                 </CardBody>
@@ -289,8 +269,10 @@ export default function SectionCards() {
                 )}
               >
                 <Button style={{background: "orange"}} round>
-                  MORE
+                 MORE     <ArrowRightAltIcon className={classes.icons} ></ArrowRightAltIcon>
                 </Button>
+                <br></br>
+                <br></br>
               </GridItem>
             </GridContainer>
         </div>
