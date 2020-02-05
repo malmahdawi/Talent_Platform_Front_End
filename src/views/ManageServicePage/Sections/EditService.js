@@ -5,12 +5,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Icon from "@material-ui/core/Icon";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
 // @material-ui/icons
-import Face from "@material-ui/icons/Face";
 import Email from "@material-ui/icons/Email";
 import Favorite from "@material-ui/icons/Favorite";
 // core components
@@ -24,6 +19,10 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 import loginPageStyle from "assets/jss/material-kit-pro-react/views/loginPageStyle.js";
 
@@ -33,13 +32,9 @@ const useStyles = makeStyles(loginPageStyle);
 
 
 
-export default function Signup(props,{...rest}) {
-  const [simpleSelect, setSimpleSelect] = React.useState("");
-  const handleSimple = event => {
-    setSimpleSelect(event.target.value);
-    props.handleRole(event);
-  };
-  
+export default function EditService(props,{...rest}) {
+    // console.log(props.service.service);
+    
     React.useEffect(() => {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
@@ -68,58 +63,44 @@ export default function Signup(props,{...rest}) {
         >
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={12} sm={12} md={8}>
                 <Card>
                   <form className={classes.form}>
                     <CardHeader
                       color="primary"
                       className={classes.cardHeader}
                     >
-                      <h4 className={classes.cardTitle}>Sign Up</h4>
+                      <h4 className={classes.cardTitle}>Login</h4>
                     </CardHeader>
 
-                    <CardBody signin>
-                        <CustomInput
-                        id="username"
-                        formControlProps={{
-                            fullWidth: true
-                        }}
-                        inputProps={{
-                            onChange: e=>props.handleChange(e),
-                            placeholder: "Username...",
-                            type: "text",
-                            startAdornment: (
-                            <InputAdornment position="start">
-                                <Face className={classes.inputIconsColor} />
-                            </InputAdornment>
-                            )
-                        }}
-                        />
+                    <CardBody >
                       <CustomInput
-                        id="email"
+                        id="name"
                         formControlProps={{
                           fullWidth: true
                         }}
                         inputProps={{
                             onChange: e=>props.handleChange(e),
-                            placeholder: "Email...",
-                            type: "email",
+                            placeholder: "Name...",
+                            type: "name",
+                            value: props.service.name,
                             startAdornment: (
                                 <InputAdornment position="start">
-                                    <Email className={classes.inputIconsColor} />
+                                <Email className={classes.inputIconsColor} />
                                 </InputAdornment>
                             )
                         }}
                       />
                       <CustomInput
-                        id="password"
+                        id="price_range"
                         formControlProps={{
                           fullWidth: true
                         }}
                         inputProps={{
                             onChange: e=>props.handleChange(e),
-                            placeholder: "Password",
-                            type: "password",
+                            placeholder: "Price Range...",
+                            type: "price_range",
+                            value: props.service.price_range,
                             startAdornment: (
                                 <InputAdornment position="start">
                                 <Icon className={classes.inputIconsColor}>
@@ -127,64 +108,46 @@ export default function Signup(props,{...rest}) {
                                 </Icon>
                                 </InputAdornment>
                             ),
-                            autoComplete: "off"
                         }}
                       />
-                      <br/>
-                      <FormControl fullWidth className={classes.selectFormControl}>
-                        <InputLabel
-                          htmlFor="simple-select"
-                          className={classes.selectLabel}
-                        >
-                          Select User Type
-                        </InputLabel>
-                        <Select
-                          MenuProps={{
-                            className: classes.selectMenu
-                          }}
-                          classes={{
-                            select: classes.select
-                          }}
-                          value={simpleSelect}
-                          onChange={handleSimple}
-                          inputProps={{
-                            name: "simpleSelect",
-                            id: "simple-select"
-                          }}
-                        >
-                          <MenuItem
-                            disabled
-                            classes={{
-                              root: classes.selectMenuItem
-                            }}
-                          >
-                            User Type
-                          </MenuItem>
-                          <MenuItem
-                            classes={{
-                              root: classes.selectMenuItem,
-                              selected: classes.selectMenuItemSelected
-                            }}
-                            value="1"
-                          >
-                            Seller
-                          </MenuItem>
-                          <MenuItem
-                            classes={{
-                              root: classes.selectMenuItem,
-                              selected: classes.selectMenuItemSelected
-                            }}
-                            value="2"
-                          >
-                            Buyer
-                          </MenuItem>
-                        </Select>
-                      </FormControl>
+                        <CustomInput
+                        id="location"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                            onChange: e=>props.handleChange(e),
+                            placeholder: "Location...",
+                            type: "location",
+                            value: props.service.location,
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                <Email className={classes.inputIconsColor} />
+                                </InputAdornment>
+                            )
+                        }}
+                        />
+                        <CustomInput
+                        id="description"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                            onChange: e=>props.handleChange(e),
+                            placeholder: "Description...",
+                            type: "description",
+                            value: props.service.description,
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                <Email className={classes.inputIconsColor} />
+                                </InputAdornment>
+                            )
+                        }}
+                        />
                     </CardBody>
-                    
                     <div className={classes.textCenter}>
                       <Button simple color="primary" size="lg" onClick={props.handleSubmit}>
-                        Get Started
+                        Commit Service
                       </Button>
                     </div>
                   </form>
