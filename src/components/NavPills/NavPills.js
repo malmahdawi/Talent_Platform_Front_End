@@ -70,7 +70,7 @@ export default function NavPills(props) {
     </Tabs>
   );
   const tabContent = (
-    <div className={classes.contentWrapper}>
+    <div className={classes.contentWrapper} >
       <SwipeableViews
         axis={direction === "rtl" ? "x-reverse" : "x"}
         index={active}
@@ -78,7 +78,7 @@ export default function NavPills(props) {
       >
         {tabs.map((prop, key) => {
           return (
-            <div className={classes.tabContent} key={key}>
+            <div className={classes.tabContent} key={key}style={{display:"flex", flexWrap:"wrap"}}>
               {prop.tabContent}
             </div>
           );
