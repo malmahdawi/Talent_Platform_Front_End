@@ -29,16 +29,6 @@ export default function Payment(props) {
   const classes = useStyles();
   return (
     <div>
-      <Header
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 300,
-          color: "primary"
-        }}
-      />
       <Parallax image={require("assets/img/payment1.jpg")} filter={'dark'} small>
         <div className={classes.container}>
           <GridContainer justify="center">

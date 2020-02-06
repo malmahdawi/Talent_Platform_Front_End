@@ -30,23 +30,10 @@ import styles from "assets/jss/material-kit-pro-react/views/ecommerceStyle.js";
 const useStyles = makeStyles(styles);
 
 export default function ManageServiceContainer(props) {
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-  });
+
   const classes = useStyles();
   return (
     <div>
-      <Header
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 300,
-          color: "info"
-        }}
-      />
       <Parallax
         image={require("assets/img/examples/clark-street-merc.jpg")}
         filter="dark"

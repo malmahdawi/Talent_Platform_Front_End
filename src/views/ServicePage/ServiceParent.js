@@ -38,26 +38,10 @@ export default class ServiceParent extends Component {
         this.state.categories.map(c=>{
             categories.push([c.category.name, c.services])
         })
-
-        // const contents = categories.map(e =>{
-        //     return (
-        //         {
-        //             tabButton: e[0],
-        //             tabContent: e[1].map(s=>(
-        //                  (<span>{s.service.name}</span>)
-        //             ))
-        //         }
-        //     )
-        // })
-        // console.log(contents);
         
         return (
             <div>
                 <ServiceContainer contents={categories}/>
-                {/* <NavPills
-                color="warning"
-                tabs={contents}
-                /> */}
             </div>
         )
     }

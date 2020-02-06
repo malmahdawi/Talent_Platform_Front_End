@@ -20,8 +20,6 @@ import Subject from "@material-ui/icons/Subject";
 import WatchLater from "@material-ui/icons/WatchLater";
 import {Link} from "react-router-dom"
 // core components
-// import Card from "components/Card/Card.js";
-// import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 
 import projectsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
@@ -38,19 +36,6 @@ const useStyles = makeStyles(style);
 
 export default function ServiceItems(props) {
   const classes = useStyles();
-
-  // let [data, setData] = useState([]);
-
-  // The useEffect() hook fires any time that the component is rendered.
-  // An empty array is passed as the second argument so that the effect only fires once.
-  // useEffect(() => {
-  //   axios
-  //     .get(`${API.url}/services`)
-  //     .then(response => setData(response.data));
-  // }, []);
-
-  // console.log(data);
-
   const contents = props.contents.map(e =>{
     return (
         {
@@ -58,9 +43,7 @@ export default function ServiceItems(props) {
             tabContent: e[1].map((s,i)=>(
                  (
                   // <>
-                    <GridItem  xs={12} sm={4} md={4} lg={4}
-                    
-                    >
+                    <GridItem  xs={12} sm={4} md={4} lg={4} key={i}>
                         <Card
                         background
                         style={{
@@ -102,39 +85,7 @@ export default function ServiceItems(props) {
                         </CardBody>
                       </Card>
                       </GridItem>
-                  
-// {/*                     
-//                       <GridItem key={i} md={12} sm={12} lg={4}>
-//                         <Card product plain>
-//                           <CardHeader image plain>
-//                             <a href="">
-//                               <img style={{height: '270px'}} src={s.galleries[0]? s.galleries[0].url:""} alt="mohammed" />
-//                             </a>
-//                             <div
-//                               className={classes.coloredShadow}
-//                               style={{ backgroundImage: `url(${gucci})`, opacity: 1 }}
-//                             />
-//                           </CardHeader>
-//                           <CardBody className={classes.textCenter} plain>
-//                             <h4 className={classes.cardTitle}>Service Name :{s.service.name}</h4>
-//                             <p className={classes.cardDescription}>
-//                               Description :
-//                              {s.service.description}
-//                             </p>
-//                           </CardBody>
-//                           <CardFooter plain>
-//                             <div className={classes.priceContainer}>
-//                               <span className={classNames(classes.price, classes.priceOld)}>
-//                                 {" "}
-//                                 price range : {s.service.price_range} per Hour
-//                               </span>
-            
-//                             </div>
-//                           </CardFooter>
-//                         </Card>
-//                       </GridItem> */}
-
-                // </>
+                
                   )
             ))
         }
@@ -143,22 +94,17 @@ export default function ServiceItems(props) {
 console.log(contents);
 
   return (
-    // <div className={classes.projects}>
         <div className={classes.container}>
       <GridContainer>
-        {/* <Box justifyContent="center" flexWrap="wrap"> */}
         <GridItem  xs={12} sm={12} md={12} lg={12}>
       <NavPills
 
       color="warning"
       alignCenter
       tabs={contents}
-      // horizontal={contents}
       /> 
       </GridItem>
-      {/* </Box> */}
       </GridContainer>
     </div>
-    // </div>
   )
 }

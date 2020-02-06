@@ -30,44 +30,11 @@ const useStyles = makeStyles(loginPageStyle);
 
 
 
-export default function MakeOffer(props,{...rest}) {
-//   const [multipleSelect, setMultipleSelect] = React.useState([]);
-//   const handleMultiple = event => {
-//     setMultipleSelect(event.target.value);
-    // props.handleCategories(event.target.value);
-//   };
-//   const menues = props.categories.map((e,i)=>{
-//     return(
-//               <MenuItem key={i}
-//                 classes={{
-//                   // root: classes.selectMenuItem,
-//                   // selected: classes.selectMenuItemSelectedMultiple
-//                 }}
-//                 value={e[0]}
-//               >
-//                 {e[1]}
-//               </MenuItem>
-//     )
-//   })
+export default function MakeOffer(props) {
 
-    React.useEffect(() => {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-      });
       const classes = useStyles();
     return (
         <div>
-      <Header
-        color="transparent"
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
-        changeColorOnScroll={{
-          height: 300,
-          color: "info"
-        }}
-        {...rest}
-      />
         <div
           className={classes.pageHeader}
           style={{

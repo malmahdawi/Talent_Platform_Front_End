@@ -32,27 +32,10 @@ const useStyles = makeStyles(loginPageStyle);
 
 
 
-export default function EditService(props,{...rest}) {
-    // console.log(props.service.service);
-    
-    React.useEffect(() => {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-      });
+export default function EditService(props) {
       const classes = useStyles();
     return (
         <div>
-      <Header
-        color="transparent"
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
-        changeColorOnScroll={{
-          height: 300,
-          color: "info"
-        }}
-        {...rest}
-      />
         <div
           className={classes.pageHeader}
           style={{

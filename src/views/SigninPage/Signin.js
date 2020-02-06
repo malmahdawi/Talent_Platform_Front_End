@@ -31,26 +31,9 @@ const useStyles = makeStyles(loginPageStyle);
 
 
 export default function Signin(props,{...rest}) {
-    // const [user, setUser] = React.useState({email:"", password:""})
-
-    React.useEffect(() => {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-      });
       const classes = useStyles();
     return (
         <div>
-      <Header
-        color="transparent"
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
-        changeColorOnScroll={{
-          height: 300,
-          color: "info"
-        }}
-        {...rest}
-      />
         <div
           className={classes.pageHeader}
           style={{

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { createBrowserHistory } from "history";
+import history from "./history.js";
 import { Router, Route, Switch } from "react-router";
+import Header from "components/Header/Header.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
 
 import Home from "views/HomePage/Hero.js";
 import Signup from "views/SignupPage/SignupParent.js";
@@ -14,13 +16,25 @@ import PaymentParent from "./views/Payment/PaymentParent.js"
 import ServiceParent from "./views/ServicePage/ServiceParent.js"
 import MakeOfferParent from "./views/MakeOfferPage/MakeOfferParent.js"
 
-var hist = createBrowserHistory();
-
-export default class App extends Component {
-  render() {
+export default function App({...rest}) {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+  });
     return (
       <div>
-        <Router history={hist}>
+        <Router history={history}>
+        <Header
+        color="transparent"
+        brand="Talent"
+        links={<HeaderLinks dropdownHoverColor="info" />}
+        fixed
+        changeColorOnScroll={{
+          height: 300,
+          color: "info"
+        }}
+        {...rest}
+      />
             <Switch>
                 <Route path="/signup" component={Signup} />
                 <Route path="/signin" component={Signin} /> 
@@ -37,5 +51,4 @@ export default class App extends Component {
         </Router>
       </div>
     );
-  }
 }
