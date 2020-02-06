@@ -268,7 +268,7 @@ export default function SectionCards() {
                   classes.textCenter
                 )}
               >
-                <Button style={{background: "orange"}} round>
+                <Button color="primary" round>
                  MORE     <ArrowRightAltIcon className={classes.icons} ></ArrowRightAltIcon>
                 </Button>
                 <br></br>
