@@ -75,9 +75,8 @@ export default function SectionFooter() {
                   target="_blank"
                   className={classes.aClasses}
                 >
-                  Creative Tim
+                  Nardin
                 </a>{" "}
-                for a better web.
               </div>
             </div>
           }

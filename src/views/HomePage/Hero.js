@@ -75,7 +75,6 @@ export default function Hero() {
       <br></br>
       <br></br>
       <Clients></Clients>
-      <Footer></Footer>
          </div> 
       )   
 }

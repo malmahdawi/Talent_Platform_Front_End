@@ -19,7 +19,7 @@ import Profile from './views/ProfilePage/Profile'
 import Hero from './views/HomePage/Hero'
 import Aboutus from './views/AboutUsPage/AboutUsPage'
 import Footer from './views/Footer/Footer'
-var hist = createBrowserHistory();
+// var hist = createBrowserHistory();
 
 export default function App({...rest}) {
   React.useEffect(() => {
@@ -37,7 +37,7 @@ export default function App({...rest}) {
         fixed
         changeColorOnScroll={{
           height: 300,
-          color: "info"
+          color: "primary"
         }}
         {...rest}
       />
