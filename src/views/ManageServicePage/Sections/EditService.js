@@ -26,7 +26,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 
 import loginPageStyle from "assets/jss/material-kit-pro-react/views/loginPageStyle.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/Clown.jpg";
 
 const useStyles = makeStyles(loginPageStyle);
 
@@ -53,7 +53,7 @@ export default function EditService(props) {
                       color="primary"
                       className={classes.cardHeader}
                     >
-                      <h4 className={classes.cardTitle}>Login</h4>
+                      <h4 className={classes.cardTitle}>Edit Service</h4>
                     </CardHeader>
 
                     <CardBody >

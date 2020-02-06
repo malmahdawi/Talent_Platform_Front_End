@@ -5,6 +5,10 @@
 The talent platform is a fully functional web-based app build to help talented people to be involved and to be known in the _ENTERTAINMENT_ sector.
 ----
 
+## MODEL
+![007-model](./readme_images/007-model.png)
+
+
 ## WIREFRAMES
 
 ![002-landingPage](./readme_images/002-landingPage.png)
