@@ -30,23 +30,10 @@ import styles from "assets/jss/material-kit-pro-react/views/ecommerceStyle.js";
 const useStyles = makeStyles(styles);
 
 export default function ServiceContainer(props) {
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-  });
+
   const classes = useStyles();
   return (
     <div>
-      <Header
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 300,
-          color: "info"
-        }}
-      />
       <Parallax
         image={require("assets/img/SaudiDancing.jpg")}
         filter="dark"
@@ -64,11 +51,7 @@ export default function ServiceContainer(props) {
               )}
             >
               <div className={classes.brand}>
-                <h1 className={classes.title}>Ecommerce Page!</h1>
-                <h4>
-                  Free global delivery for all products. Use coupon{" "}
-                  <b>25summer</b> for an extra 25% Off
-                </h4>
+                <h1 className={classes.title}>SERVICES</h1>
               </div>
             </GridItem>
           </GridContainer>

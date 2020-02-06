@@ -26,23 +26,10 @@ import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.j
 const useStyles = makeStyles(aboutUsStyle);
 
 export default function AboutUsPage() {
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-  });
+
   const classes = useStyles();
   return (
     <div>
-      <Header
-        brand="Talent Platform"
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 300,
-          color: "info"
-        }}
-      />
       <Parallax image={require("assets/img/bg9.jpg")} filter="dark" small>
         <div className={classes.container}>
           <GridContainer justify="center">

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Payment from "./Payment"
 import Axios from 'axios'
 import API from '../../API'
+import history from '../../history';
 
 var moment = require('moment');
 
@@ -21,6 +22,7 @@ export default class PaymentParent extends Component {
         {headers: {"Authorization": `Bearer ${localStorage.token}`}})
         .then(r=>{
             console.log(r);
+            history.push("/my-offers")
         })
         .catch(e=>{
             console.log(e);

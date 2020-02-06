@@ -1,5 +1,7 @@
 /* eslint-disable */
 import React from "react";
+import history from "../../history"
+import API from "../../API"
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // react components for routing our app without refresh
@@ -51,10 +53,12 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-pro-react/components/headerLinksStyle.js";
+import Axios from "axios";
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
+  const [isLoggedIn,setIsLoggedIn] = React.useState(false)
   const easeInOutQuad = (t, b, c, d) => {
     t /= d / 2;
     if (t < 1) return (c / 2) * t * t + b;
@@ -140,16 +144,20 @@ export default function HeaderLinks(props) {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/signout" >
           <Button
             color={window.innerWidth < 960 ? "info" : "white"}
             target="_blank"
             className={classes.navButton}
             simple
+            onClick={()=>{
+              localStorage.removeItem("user_type")
+              localStorage.removeItem("token")
+              setIsLoggedIn(false)
+              history.push("/")
+            }}
           >
             <Signout className={classes.icons} /> Sign Out
           </Button>
-        </Link>
       </ListItem>
     </>
   );
@@ -190,10 +198,16 @@ export default function HeaderLinks(props) {
 
   const isLoggedin = () => {
     if(localStorage.getItem('token') != null){
+      Axios.get(`${API.url}/is_loggedin`, {headers: {"Authorization": `Bearer ${localStorage.token}`}})
+      .then(r=>{
+        setIsLoggedIn(r.data.status)
+        // console.log(r.data.status);
+        
+        // return r.data.status
+      })
       
-      return true
     }
-    return false
+    return isLoggedIn
   }
   const isSeller = () => {
     if(localStorage.getItem('user_type') == "seller"){
@@ -218,7 +232,7 @@ export default function HeaderLinks(props) {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/signin" >
+        <Link to="/services" >
           <Button
             color={window.innerWidth < 960 ? "info" : "white"}
             target="_blank"

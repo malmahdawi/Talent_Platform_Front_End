@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Signup from './Signup'
 import Axios from 'axios';
 import API from '../../API'
+import history from '../../history';
 
 export default class SignupParent extends Component {
     state = {user:{username: "",email: "", password: ""}, role_id: 0}
@@ -22,6 +23,7 @@ export default class SignupParent extends Component {
         Axios.post(`${API.url}/signup`, {user: this.state.user, role_id: this.state.role_id})
         .then(r=>{
             console.log(r.data);
+            history.push("/")
         })
         .catch(e=>{
             //alert

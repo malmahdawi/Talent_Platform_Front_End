@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Signin from './Signin'
 import Axios from 'axios';
 import API from '../../API'
+import history from '../../history';
 
 export default class SigninParent extends Component {
     state = {email:"", password:""}
@@ -19,6 +20,7 @@ export default class SigninParent extends Component {
             localStorage.setItem("user_type", r.data.user_type)
             if (localStorage.token) {
                 // history.push("/")
+                history.push("/")
             }
         })
         .catch(e=>{

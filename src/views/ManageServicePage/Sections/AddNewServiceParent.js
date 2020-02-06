@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Axios from 'axios';
 import API from '../../../API'
 import AddNewService from "./AddNewService.js"
+import history from '../../../history';
 
 export default class AddNewServiceParent extends Component {
 
@@ -46,7 +47,7 @@ export default class AddNewServiceParent extends Component {
                     ,{headers: {"Authorization": `Bearer ${localStorage.token}`}})
         .then(r=>{
             console.log(r);
-            
+            history.push("/my-services")
         })
         .catch(e=>{
             //alert
