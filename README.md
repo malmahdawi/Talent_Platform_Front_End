@@ -1,4 +1,4 @@
-![Misk Academy | GA logo](001-MG_logo.png)
+![Misk Academy | GA logo](./readme_images/001-MG_logo.png)
 
 ## INTRODUCTION
 
