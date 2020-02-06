@@ -27,7 +27,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import loginPageStyle from "assets/jss/material-kit-pro-react/views/loginPageStyle.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/Clown.jpg";
 
 const useStyles = makeStyles(loginPageStyle);
 

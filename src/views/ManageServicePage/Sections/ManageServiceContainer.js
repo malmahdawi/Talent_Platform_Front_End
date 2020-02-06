@@ -35,7 +35,7 @@ export default function ManageServiceContainer(props) {
   return (
     <div>
       <Parallax
-        image={require("assets/img/examples/clark-street-merc.jpg")}
+        image={require("assets/img/CircusClown.jpg")}
         filter="dark"
         small
       >
@@ -51,11 +51,7 @@ export default function ManageServiceContainer(props) {
               )}
             >
               <div className={classes.brand}>
-                <h1 className={classes.title}>Ecommerce Page!</h1>
-                <h4>
-                  Free global delivery for all products. Use coupon{" "}
-                  <b>25summer</b> for an extra 25% Off
-                </h4>
+                <h1 className={classes.title}>MANAGE SERVICES</h1>
               </div>
             </GridItem>
           </GridContainer>
@@ -65,7 +61,6 @@ export default function ManageServiceContainer(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.section} >
             <div className={classes.container} >
-                <h2>Services</h2>
                     <ManageServiceItems services={props.services}/>
             </div>
             </div>

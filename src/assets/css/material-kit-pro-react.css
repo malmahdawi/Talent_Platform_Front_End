@@ -151,7 +151,9 @@ h5,
 h6 {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  text-align: center;
+}
 
 h1,
 h2,
@@ -159,7 +161,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: inherit; }
+  color: inherit;
+  text-align: center; }
 
 h1,
 h2,
@@ -171,7 +174,8 @@ h4,
 h5,
 h6 {
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-align: center; }
 
 h1 {
   font-size: 3.3125rem;
@@ -196,7 +200,8 @@ h5 {
 h6 {
   font-size: 0.75rem;
   text-transform: uppercase;
-  font-weight: 500; }
+  font-weight: 500;
+  text-align: center; }
 
 p {
   font-size: 14px;
@@ -232,7 +237,7 @@ legend {
     outline: 0; }
 
 a {
-  color: #9c27b0;
+  color: #f44336;
   text-decoration: none;
   background-color: transparent; }
   a:hover, a:focus {
@@ -462,7 +467,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
   cursor: pointer;
   border-radius: 100%;
   transition: all 0.2s ease-out;
-  border: 1px solid #9c27b0;
+  border: 1px solid #f44336;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
 
@@ -480,7 +485,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
   cursor: pointer;
   border-radius: 100%;
   transition: all 0.2s ease-out;
-  border: 1px solid #9c27b0;
+  border: 1px solid #f44336;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
 
@@ -661,10 +666,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border: 1px solid #333; }
 
 .noUi-target.slider-primary .noUi-connect, .noUi-target.slider-primary.noUi-connect {
-  background-color: #ff4f00; }
+  background-color: #f44336; }
 
 .noUi-target.slider-primary .noUi-handle {
-  border-color: #ff4f00; }
+  border-color: #f44336; }
 
 .noUi-target.slider-info .noUi-connect, .noUi-target.slider-info.noUi-connect {
   background-color: #00bcd4; }
@@ -691,10 +696,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border-color: #f44336; }
 
 .noUi-target.slider-rose .noUi-connect, .noUi-target.slider-rose.noUi-connect {
-  background-color: #e91e63; }
+  background-color: #f44336; }
 
 .noUi-target.slider-rose .noUi-handle {
-  border-color: #e91e63; }
+  border-color: #f44336; }
 
 /*!
 * https://github.com/YouCanBookMe/react-datetime
@@ -717,7 +722,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-top: 0; }
   .rdt input.form-control {
     border: 0;
-    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#d2d2d2, #d2d2d2);
+    background-image: linear-gradient(#f44336, #f44336), linear-gradient(#d2d2d2, #d2d2d2);
     background-size: 0 2px, 100% 1px;
     background-repeat: no-repeat;
     background-position: center bottom, center calc(100% - 1px);
@@ -739,7 +744,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: #555; }
   .rdt input.form-control:focus {
     outline: none;
-    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#d2d2d2, #d2d2d2);
+    background-image: linear-gradient(#f44336, #f44336), linear-gradient(#d2d2d2, #d2d2d2);
     background-size: 100% 2px, 100% 1px;
     box-shadow: none;
     transition-duration: 0.3s; }
@@ -816,7 +821,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 0px;
   border-radius: 50%; }
   .rdtDay.rdtToday.rdtActive, .rdtDay.rdtActive, .rdtDay.rdtActive:hover {
-    background-color: #9c27b0 !important;
+    background-color: #f44336 !important;
     color: #fff;
     box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(156, 39, 176, 0.6); }
 
@@ -886,10 +891,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   color: #495057; }
 
 .rdtPicker .rdtTimeToggle {
-  color: #9c27b0; }
+  color: #f44336; }
 
 .rdtPicker .rdtTime th.rdtSwitch {
-  color: #9c27b0; }
+  color: #f44336; }
 
 .rdtPrev span,
 .rdtNext span {
@@ -965,9 +970,9 @@ td.rdtYear:hover {
     border: 1px solid transparent; }
 
 .rdtCounters .rdtCounter:last-child .rdtCount {
-  color: #9c27b0;
+  color: #f44336;
   border-radius: 50%;
-  border: 1px solid #9c27b0; }
+  border: 1px solid #f44336; }
 
 .rdtCounterSeparator {
   padding: 7px;
@@ -978,7 +983,7 @@ td.rdtYear:hover {
   cursor: pointer;
   display: block;
   border-radius: 50%;
-  color: #9c27b0;
+  color: #f44336;
   -webkit-transition: all 60ms ease-in;
   -moz-transition: all 60ms ease-in;
   -o-transition: all 60ms ease-in;
@@ -1032,7 +1037,7 @@ td.rdtYear:hover {
     .rdtMonths .rdtYear.rdtActive,
     .rdtYears .rdtMonth.rdtActive,
     .rdtYears .rdtYear.rdtActive {
-      background-color: #9c27b0 !important;
+      background-color: #f44336 !important;
       color: #fff; }
 
 /*!
@@ -1741,7 +1746,7 @@ button.slick-arrow.slick-next {
       background-color: transparent;
       color: #ffffff; }
   .react-tagsinput .react-tagsinput-tag.primary {
-    background-color: #9c27b0; }
+    background-color: #f44336; }
   .react-tagsinput .react-tagsinput-tag.info {
     background-color: #00bcd4; }
   .react-tagsinput .react-tagsinput-tag.success {
@@ -1751,6 +1756,6 @@ button.slick-arrow.slick-next {
   .react-tagsinput .react-tagsinput-tag.danger {
     background-color: #f44336; }
   .react-tagsinput .react-tagsinput-tag.rose {
-    background-color: #e91e63; }
+    background-color: #f44336; }
   .react-tagsinput .react-tagsinput-tag.default {
     background-color: #999; }

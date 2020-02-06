@@ -34,7 +34,7 @@ export default function OfferContainer(props) {
   return (
     <div>
       <Parallax
-        image={require("assets/img/examples/clark-street-merc.jpg")}
+        image={require("assets/img/SaudiGitar.jpg")}
         filter="dark"
         small
       >
@@ -50,11 +50,7 @@ export default function OfferContainer(props) {
               )}
             >
               <div className={classes.brand}>
-                <h1 className={classes.title}>Ecommerce Page!</h1>
-                <h4>
-                  Free global delivery for all products. Use coupon{" "}
-                  <b>25summer</b> for an extra 25% Off
-                </h4>
+                <h1 className={classes.title}>OFFERS</h1>
               </div>
             </GridItem>
           </GridContainer>
@@ -64,7 +60,7 @@ export default function OfferContainer(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.section} >
             <div className={classes.container} >
-                <h2>Offers</h2>
+                {/* <h2 style={{textAlign: 'center'}}>OFFERS</h2> */}
                     <OfferItems offers={props.offers} handleAction={props.handleAction}/>
             </div>
             </div>

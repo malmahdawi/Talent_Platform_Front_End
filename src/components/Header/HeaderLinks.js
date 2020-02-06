@@ -58,6 +58,7 @@ import Axios from "axios";
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
+  const [isLoggedIn,setIsLoggedIn] = React.useState(false)
   const easeInOutQuad = (t, b, c, d) => {
     t /= d / 2;
     if (t < 1) return (c / 2) * t * t + b;
@@ -151,6 +152,7 @@ export default function HeaderLinks(props) {
             onClick={()=>{
               localStorage.removeItem("user_type")
               localStorage.removeItem("token")
+              setIsLoggedIn(false)
               history.push("/")
             }}
           >
@@ -196,15 +198,16 @@ export default function HeaderLinks(props) {
 
   const isLoggedin = () => {
     if(localStorage.getItem('token') != null){
-      Axios.get(`${API.url}/is_loggedin`)
+      Axios.get(`${API.url}/is_loggedin`, {headers: {"Authorization": `Bearer ${localStorage.token}`}})
       .then(r=>{
-        console.log(r.data.status);
+        setIsLoggedIn(r.data.status)
+        // console.log(r.data.status);
         
-        return r.data.status
+        // return r.data.status
       })
-      return true
+      
     }
-    return false
+    return isLoggedIn
   }
   const isSeller = () => {
     if(localStorage.getItem('user_type') == "seller"){

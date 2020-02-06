@@ -51,11 +51,7 @@ export default function ServiceContainer(props) {
               )}
             >
               <div className={classes.brand}>
-                <h1 className={classes.title}>Ecommerce Page!</h1>
-                <h4>
-                  Free global delivery for all products. Use coupon{" "}
-                  <b>25summer</b> for an extra 25% Off
-                </h4>
+                <h1 className={classes.title}>SERVICES</h1>
               </div>
             </GridItem>
           </GridContainer>
