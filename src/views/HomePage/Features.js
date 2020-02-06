@@ -40,7 +40,7 @@ export default function SectionProduct() {
               title="HIRE A TALENT"
               description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
               icon={EventAvailable}
-              iconColor="info"
+              iconColor="primary"
               vertical
             />
           </GridItem>
@@ -49,7 +49,7 @@ export default function SectionProduct() {
               title="PAYMENT"
               description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
               icon={Payment}
-              iconColor="info"
+              iconColor="primary"
               vertical
             />
           </GridItem>
@@ -58,7 +58,7 @@ export default function SectionProduct() {
               title="CONFIRM THE BOOKING"
               description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
               icon={CheckCircle}
-              iconColor="info"
+              iconColor="primary"
               vertical
               
             />

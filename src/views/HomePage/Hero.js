@@ -29,7 +29,7 @@ import image from "assets/img/hero.jpg";
 
 const useStyles = makeStyles(landingPageStyle);
 
-
+// #f44336
 
 
 export default function Hero({ ...rest }) {
@@ -47,12 +47,12 @@ export default function Hero({ ...rest }) {
         fixed
         changeColorOnScroll={{
           height: 300,
-          color: "info" 
+          color: "primary" 
         }}
         {...rest}
       />
       <Parallax
-       image={require("assets/img/hero.jpg")}
+       image={require("assets/img/saudiDancing.png")}
        filter="dark"
         
         >
@@ -63,9 +63,9 @@ export default function Hero({ ...rest }) {
                Find The Perfect Talents
 
                For Your Event!</h1>
-              <h3>
+              <h4 style={{textTransform: 'uppercase', fontWeight: 'bold'}}>
               A single place, millions of creative talents
-              </h3>
+              </h4>
               <br />
               <Button
                 color="danger"
@@ -83,7 +83,7 @@ export default function Hero({ ...rest }) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <Features></Features>
-          <hr></hr>
+          <hr style={{borderTop: '2px solid red'}}></hr>
           <Cards></Cards>
         </div>
       </div>

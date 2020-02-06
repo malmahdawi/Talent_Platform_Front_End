@@ -8,12 +8,15 @@ import Signin from "views/SigninPage/SigninParent.js";
 import Offer from "views/OfferPage/OfferParent.js"
 import ManageService from "views/ManageServicePage/ManageServiceParent.js"
 import CheckOffersParent from 'views/CheckOffersPage/CheckOffersParent';
+// import CheckOffersContainer from 'views/CheckOffersPage/Senctions/CheckOffersContainer'
 import AddNewServiceParent from './views/ManageServicePage/Sections/AddNewServiceParent.js'
 import EditServiceParent from './views/ManageServicePage/Sections/EditServiceParent.js'
 import PaymentParent from "./views/Payment/PaymentParent.js"
 import ServiceParent from "./views/ServicePage/ServiceParent.js"
 import MakeOfferParent from "./views/MakeOfferPage/MakeOfferParent.js"
-
+import Profile from './views/ProfilePage/Profile'
+import Hero from './views/HomePage/Hero'
+import Aboutus from './views/AboutUsPage/AboutUsPage'
 var hist = createBrowserHistory();
 
 export default class App extends Component {
@@ -23,8 +26,12 @@ export default class App extends Component {
         <Router history={hist}>
             <Switch>
                 <Route path="/signup" component={Signup} />
-                <Route path="/signin" component={Signin} /> 
+                <Route path="/home" component={Hero} />
+                {/* <Route path="/CheckOffersContainer" component={CheckOffersContainer} /> */}
+                <Route path="/signin" component={Signin} />
+                <Route path="/profile" component={Profile} /> 
                 <Route path="/my-offers" component={Offer} /> 
+                <Route path="/aboutus" component={Aboutus} /> 
                 <Route path="/my-services" component={ManageService} /> 
                 <Route path="/check-offers" component={CheckOffersParent} /> 
                 <Route path="/add-new-service" component={AddNewServiceParent} />
