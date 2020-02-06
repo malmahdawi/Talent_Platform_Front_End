@@ -48,7 +48,7 @@ export default function ServiceContainer(props) {
         }}
       />
       <Parallax
-        image={require("assets/img/examples/clark-street-merc.jpg")}
+        image={require("assets/img/SaudiDancing.jpg")}
         filter="dark"
         small
       >

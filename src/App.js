@@ -17,6 +17,7 @@ import MakeOfferParent from "./views/MakeOfferPage/MakeOfferParent.js"
 import Profile from './views/ProfilePage/Profile'
 import Hero from './views/HomePage/Hero'
 import Aboutus from './views/AboutUsPage/AboutUsPage'
+import Footer from './views/Footer/Footer'
 var hist = createBrowserHistory();
 
 export default class App extends Component {
@@ -42,6 +43,7 @@ export default class App extends Component {
                 <Route path="/" component={Home} />
             </Switch>
         </Router>
+        <Footer></Footer>
       </div>
     );
   }
