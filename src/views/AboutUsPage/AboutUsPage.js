@@ -56,9 +56,6 @@ export default function AboutUsPage() {
               )}
             >
               <h1 className={classes.title}>About Us</h1>
-              <h4>
-                هنا نبذة عن المنصة ..
-              </h4>
             </GridItem>
           </GridContainer>
         </div>
@@ -66,12 +63,6 @@ export default function AboutUsPage() {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <SectionDescription />
-          
-          <SectionServices />
-      
-          <SectionContact />
-
-          <SectionTeam />
         </div>
       </div>
       <Footer
