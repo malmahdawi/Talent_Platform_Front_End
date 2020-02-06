@@ -20,10 +20,10 @@ import Hero from './views/HomePage/Hero'
 import Aboutus from './views/AboutUsPage/AboutUsPage'
 
 export default function App({...rest}) {
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-  });
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+    });
 
     return (
       <div>
@@ -31,7 +31,7 @@ export default function App({...rest}) {
         <Header
         color="transparent"
         brand="Talent"
-        links={<HeaderLinks dropdownHoverColor="info" />}
+        links={<HeaderLinks dropdownHoverColor="danger" />}
         fixed
         changeColorOnScroll={{
           height: 300,
@@ -45,7 +45,7 @@ export default function App({...rest}) {
                 <Route path="/signin" component={Signin} />
                 <Route path="/profile" component={Profile} /> 
                 <Route path="/my-offers" component={Offer} /> 
-                <Route path="/aboutus" component={Aboutus} /> 
+                <Route path="/about-us" component={Aboutus} /> 
                 <Route path="/my-services" component={ManageService} /> 
                 <Route path="/check-offers" component={CheckOffersParent} /> 
                 <Route path="/add-new-service" component={AddNewServiceParent} />

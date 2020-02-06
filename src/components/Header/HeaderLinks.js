@@ -197,16 +197,11 @@ export default function HeaderLinks(props) {
   );
 
   const isLoggedin = () => {
-    if(localStorage.getItem('token') != null){
-      Axios.get(`${API.url}/is_loggedin`, {headers: {"Authorization": `Bearer ${localStorage.token}`}})
-      .then(r=>{
-        setIsLoggedIn(r.data.status)
-        // console.log(r.data.status);
-        
-        // return r.data.status
-      })
-      
-    }
+
+        Axios.get(`${API.url}/is_loggedin`, {headers: {"Authorization": `Bearer ${localStorage.token}`}})
+        .then(r=>{
+          setIsLoggedIn(r.data.status)
+        })
     return isLoggedIn
   }
   const isSeller = () => {
@@ -244,14 +239,14 @@ export default function HeaderLinks(props) {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem+" "+classes.border}>
-        <Link to="/contact-us" >
+        <Link to="/about-us" >
           <Button
             color={window.innerWidth < 960 ? "info" : "white"}
             target="_blank"
             className={classes.navButton}
             simple
           >
-            <Contact className={classes.icons} /> Contact Us
+            <Contact className={classes.icons} /> About Us
           </Button>
         </Link>
       </ListItem>

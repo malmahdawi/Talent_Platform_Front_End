@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Misk Academy | GA logo](001-MG_logo.png)
 
-## Available Scripts
+## INTRODUCTION
 
-In the project directory, you can run:
+The talent platform is a fully functional web-based app build to help talented people to be involved and to be known in the _ENTERTAINMENT_ sector.
+----
 
-### `yarn start`
+## WIREFRAMES
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![002-landingPage](./readme_images/002-landingPage.png)
+![003-signinPage](./readme_images/003-signinPage.png)
+![004-registrationPage](./readme_images/004-registrationPage.png)
+![005-profilePage](./readme_images/005-profilePage.png)
+![006-aboutUsPage](./readme_images/006-aboutUsPage.png)
+----
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## USER EXPERIENCE
 
-### `yarn test`
+* The user can:
+    * Register, log in and log out.
+    * Show other users' profiles and comments.
+    * Post comments.
+    * Update belonged profile.
+    * Update belonged comments.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Uppon registration the user can choose to be **BUYER** or **SELLER**.
+    * As a buyer user can:
+        - Post an offer.
+        - Update and delete belonged offer if not declined.
+        - Check belonged offers status.
+        - Show belonged offers history.
+        - Make payment
+    * As a seller user can:
+        - Post and manage services.
+        - Receive offers.
+        - Accept and decline offers.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+----
+## List of used technologies
+- Cup of coffee.
+- Laptops.
+- VS Code.
+- HTML, CSS, and JS.
+- Ruby on Rails.
+- React.
+- Material UI.
+- Google Chrome.
+----
+## DEMONSTRATION
+----
+## FINALLY
+we like to thank MiSK Academy | GA for giving us the opportunity to learn under this atmosphere which will never be the same without a INSTRUCTORS like you. Thank you for being our inspiration!
+* Mr. Saad Iqbal.
+    - Thank you for everything we appreciate all your effort and congratulation for your baby.
+* Ms. Samar Faris.
+    - No words can describe you thank you ASHKAL SHAY.
+* Mr. Abdullah Al-Towaim
+    - Thank you for your patience on us.
+* Ms. Sara Daghustani
+    - OMG what we can say ..!? THANK YOU **QUINTILLION**.
+----
+## AUTHORS
+</> ♥ by Team Nardin
+- Mohammad Al-Mahdawy.
+- Abdurrahman Al-Sulami.
+- Bandar Al-Huthaly.
+- Faisal Al-Sulaimani.
